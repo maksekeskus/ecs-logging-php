@@ -1,5 +1,5 @@
 {
-    "name": "elastic/ecs-logging",
+    "name": "maksekeskus/ecs-logging",
     "description": "Format and enrich your log files in the elastic common schema",
     "keywords": ["log", "logging", "psr-3", "ecs", "elastic", "filebeat"],
     "homepage": "https://www.elastic.co/guide/en/ecs/",
@@ -7,18 +7,13 @@
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Philip Krauss",
-            "email": "philip.krauss@elastic.co",
-            "homepage": "https://github.com/philkra"
-        },
-        {
-            "name": "Sergey Kleyman",
-            "homepage": "https://github.com/SergeyKleyman"
+            "name": "Andzejs Nereds",
+            "email": "modules@maksekeskus.ee"
         }
     ],
     "require": {
-        "php": "^7.2||^8.0",
-        "psr/log": "^1.0.1",
+        "php": ">=8.0",
+        "psr/log": ">=2.0",
 	    "ext-json": "*"
     },
     "require-dev": {
