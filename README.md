@@ -12,7 +12,7 @@ See the [PHP ECS logging documentation](https://www.elastic.co/guide/en/ecs-logg
 
 ## Install
 ```
-composer require elastic/ecs-logging
+composer require maksekeskus/ecs-logging
 ```
 
 ## Examples and Usage
@@ -26,10 +26,6 @@ composer require elastic/ecs-logging
 * [Documentation](https://www.elastic.co/guide/en/ecs-logging/php/current/intro.html)
 * Introduction to ECS [blog post](https://www.elastic.co/blog/introducing-the-elastic-common-schema).
 * Logs UI [blog post](https://www.elastic.co/blog/infrastructure-and-logs-ui-new-ways-for-ops-to-interact-with-elasticsearch).
-
-## Contributing
-
-See [contributing documentation](CONTRIBUTING.md).
 
 ## License
 This software is licensed under the [Apache 2 license](https://github.com/elastic/ecs-logging-php/blob/main/LICENSE).
