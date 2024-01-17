@@ -44,7 +44,7 @@ class ElasticCommonSchemaFormatter extends NormalizerFormatter
      */
     public function __construct(array $tags = [])
     {
-        parent::__construct('Y-m-d\TH:i:s.uP');
+        parent::__construct('Y-m-d H:i:s.v');
         $this->tags = $tags;
     }
 
