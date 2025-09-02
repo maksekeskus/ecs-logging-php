@@ -91,7 +91,7 @@ class ElasticCommonSchemaFormatter extends NormalizerFormatter
 
         // Add "message"
         if (isset($inRecord['message']) === true) {
-            $outRecord['message'] = $inRecord['message'];
+            $outRecord['message'] = $this->truncateMessage($inRecord['message']);
         }
 
         // Add "ecs.version"
@@ -215,5 +215,20 @@ class ElasticCommonSchemaFormatter extends NormalizerFormatter
         if (!empty($originVal)) {
             $outRecord['log']['origin'] = $originVal;
         }
+    }
+
+    private function truncateMessage(string $message, int $maxKB = 200): string
+    {
+        $bytes = mb_strlen($message, "8bit");   // exact byte length
+        $kb    = $bytes / 1024;
+
+        if ($kb > $maxKB) {
+            $allowedBytes = $maxKB * 1024 - 3;
+            // Cut by bytes, not characters
+            $truncated = mb_strcut($message, 0, $allowedBytes, "UTF-8");
+            return $truncated . '...';
+        }
+
+        return $message;
     }
 }
