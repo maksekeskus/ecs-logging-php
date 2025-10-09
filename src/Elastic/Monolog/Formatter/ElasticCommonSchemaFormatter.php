@@ -217,7 +217,7 @@ class ElasticCommonSchemaFormatter extends NormalizerFormatter
         }
     }
 
-    private function truncateMessage(string $message, int $maxKB = 200): string
+    private function truncateMessage(string $message, int $maxKB = 60): string
     {
         $bytes = mb_strlen($message, "8bit");   // exact byte length
         $kb    = $bytes / 1024;
