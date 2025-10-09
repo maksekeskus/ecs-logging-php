@@ -226,7 +226,7 @@ class ElasticCommonSchemaFormatter extends NormalizerFormatter
             $allowedBytes = $maxKB * 1024 - 3;
             // Cut by bytes, not characters
             $truncated = mb_strcut($message, 0, $allowedBytes, "UTF-8");
-            return $truncated . '...';
+            return $truncated . '... [truncated by ecs logger]';
         }
 
         return $message;
